@@ -1,0 +1,93 @@
+@keyframes line-in { to { transform:scaleX(1); } }
+@keyframes text-in { to { opacity:1; transform:translateY(0); } }
+
+:root {
+    --bg-color: #121e28;
+    --bg-light: #17232d;
+    --accent-color: #ff705a;
+    --text-color: #c9d1d9;
+    --muted-text: #8b949e;
+
+    --poppins: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+.container {
+    max-width: 720px;
+    margin-inline: auto;
+    padding: 1rem;
+}
+header {
+    padding-block: 1rem;
+    border-bottom: 1px solid var(--accent-color);
+}
+header h1 {
+    font-family: var(--poppins);
+    color: var(--text-color);
+    font-size: 3.5rem;
+    opacity:0;
+    transform:translateX(30px);
+    animation:text-in 2000ms 120ms ease-out forwards;
+}
+header p {
+    font-family: var(--poppins);
+    color: var(--muted-text);
+    font-size: 1.1rem;
+}
+#dot {
+    font-family: var(--poppins);
+    color: var(--accent-color);
+}
+form {
+    display: grid;
+    gap: .75rem;
+    margin-block: 1rem;
+}
+label {
+    font-family: var(--poppins);
+    color: var(--text-color);
+    display: grid;
+    gap: .25rem;
+}
+input {
+    background-color: var(--bg-light);
+    color: var(--accent-color);
+    padding: .5rem;
+    border: none;
+    border-radius: 3px;
+}
+button {
+    color: var(--text-color);
+    background-color: var(--accent-color);
+    padding: .6rem .9rem;
+    border: 0;
+    border-radius: 3px;
+}
+button:hover {
+    background-color: var(--bg-light);
+    border: solid;
+    border-color: var(--accent-color);
+}
+.error {
+    color: #b00020;
+    min-height: 1.25rem;
+}
+#bookmark-section h2{
+    font-family: var(--poppins);
+    color: var(--text-color);
+}
+#bookmark-section p {
+    font-family: var(--poppins);
+    color: var(--muted-text);
+}
+#bookmark-list {
+    color: var(--text-color);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: .5rem;
+}

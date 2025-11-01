@@ -8,7 +8,7 @@
 </head>
 <body>
   <header class="container">
-    <h1>Bookmarks</h1>
+    <h1>Bookmarks <span id="dot">.</span></h1>
     <p class="tagline">Save, open and keep track of your bookmarks.</p>
   </header>
 
@@ -25,11 +25,11 @@
         <input id="url" name="url" type="url" required />
       </label>
 
-      <button type="submit">ADD</button>
+      <button type="submit">Add Bookmark</button>
       <p id="form-error" aria-live="polite" class="error"></p>
     </form>
 
-    <section>
+    <section id="bookmark-section">
       <h2>My Bookmarks</h2>
       <p id="empty-state">No bookmarks yet.</p>
       <ul id="bookmark-list" aria-live="polite"></ul>
