@@ -24,11 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // empty list.
         list.innerHTML = '';
 
+        empty.classList.toggle('hidden', bookmarks.length !== 0);
+
         if (bookmarks.length === 0) {
-            empty.style.display = 'block';
             return;
         }
-        empty.style.display = 'none';
 
         for (const bm of bookmarks) {
             const li = document.createElement('li');
