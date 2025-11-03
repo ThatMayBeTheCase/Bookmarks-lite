@@ -5,6 +5,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const error = document.getElementById('form-error');
     const empty = document.getElementById('empty-state');
 
-    // hookar till senare functions.
+    // vår databas i minnet.
+    const bookmarks = [];
+
+    function normalizerUrl(value) {
+        if (!value) return null;
+        const withProto = /^https?:\/\//i.test(value) ? value : `https://${value}`;
+        try {
+            const url = new URL(withProto);
+            return url.toString();
+        }
+        catch {
+            return null;
+        }
+    }
 
 });
