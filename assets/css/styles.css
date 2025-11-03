@@ -93,7 +93,16 @@ button:hover {
     display: grid;
     gap: .5rem;
 }
+#bookmark-list a {
+    color: var(--accent-color);
+    word-break: break-all;
+    text-decoration: none;
+}
+#bookmark-list a:hover {
+    color: var(--text-color);
+}
+
 .hidden {
-  display: none;
+    display: none;
 }
 
