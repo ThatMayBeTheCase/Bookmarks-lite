@@ -40,6 +40,8 @@ header p {
 #dot {
     font-family: var(--poppins);
     color: var(--accent-color);
+
+/*----------------------------------------*/
 }
 form {
     display: grid;
@@ -91,3 +93,7 @@ button:hover {
     display: grid;
     gap: .5rem;
 }
+.hidden {
+  display: none;
+}
+
