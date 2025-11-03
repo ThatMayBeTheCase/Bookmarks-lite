@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function render() {
         // empty list.
-        list.innterHTML = '';
+        list.innerHTML = '';
 
         if (bookmarks.length === 0) {
             empty.style.display = 'block';
@@ -62,6 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
             url: normalizedUrl,
             createdAt: Date.now()
         });
-    })
 
+        render();
+
+        form.reset();
+        titleInput.focus();
+    });
+
+    // first render (empty)
+    render();
 });
