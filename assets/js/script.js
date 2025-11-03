@@ -40,4 +40,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        error.textContent = '';
+
+        const titleInput = document.getElementById('title');
+        const urlInput = document.getElementById('url');
+
+        const title = titleInput.value.trim();
+        const rawUrl = urlInput.value.trim();
+        const normalizedUrl = normalizeUrl(rawUrl);
+
+        if (!title || !normalizedUrl) {
+            error.textContent = 'Please enter a title and a valid URL.';
+            return;
+        }
+
+        // new bookmarks at the top.
+        bookmarks.unshift ({
+            id: crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(),title,
+            url: normalizedUrl,
+            createdAt: Date.now()
+        });
+    })
+
 });
