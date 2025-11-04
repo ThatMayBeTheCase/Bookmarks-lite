@@ -33,8 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
         for (const bm of bookmarks) {
             const li = document.createElement('li');
             li.innerHTML = `
-            <strong>${bm.title}</strong><br>
-            <span>${bm.url}</span>
+                <strong>${bm.title}</strong><br>
+                <a href="${bm.url}" target="_blank" rel= "noopener noreferrer">
+                ${bm.url}
+                </a>
             `;
             list.appendChild(li);
         }
