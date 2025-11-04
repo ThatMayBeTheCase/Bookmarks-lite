@@ -113,7 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-
     // first render with data from localStorage.
     render();
 });
