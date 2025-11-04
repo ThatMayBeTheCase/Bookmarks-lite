@@ -61,21 +61,34 @@ input {
     border: none;
     border-radius: 3px;
 }
+.add-btn {
+    margin: 0 auto;
+    width: 20rem;
+    padding: 0.6rem 0.9rem;
+}
 button {
+    font-family: var(--poppins);
     color: var(--text-color);
     background-color: var(--accent-color);
-    padding: .6rem .9rem;
-    border: 0;
+    border: solid;
     border-radius: 3px;
+    border-color: var(--accent-color);
 }
 button:hover {
     background-color: var(--bg-light);
-    border: solid;
-    border-color: var(--accent-color);
 }
 .error {
-    color: #b00020;
+    font-family: var(--poppins);
+    text-align: center;
+    color: #d82d4d;
     min-height: 1.25rem;
+}
+.delete-btn {
+    background-color: #d82d4d;
+    border-color: #d82d4d;
+    line-height: 10px;
+    height: 25px;
+    width: 60px;
 }
 #bookmark-section h2{
     font-family: var(--poppins);

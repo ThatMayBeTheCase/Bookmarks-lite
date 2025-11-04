@@ -33,7 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
         for (const bm of bookmarks) {
             const li = document.createElement('li');
             li.innerHTML = `
-                <strong>${bm.title}</strong><br>
+                
+                <strong>${bm.title}
+                    <button type="button" class="delete-btn" data-id="${bm.id}">
+                        Delete
+                    </button>
+                </strong><br>
                 <a href="${bm.url}" target="_blank" rel= "noopener noreferrer">
                 ${bm.url}
                 </a>
@@ -70,6 +75,24 @@ document.addEventListener('DOMContentLoaded', () => {
         form.reset();
         titleInput.focus();
     });
+
+    list.addEventListener('click', (event) => {
+        if (event.target.matches('.delete-btn')) {
+            const id = event.target.dataset.id;
+
+            const ok = confirm('Are you sure you wanna delete this bookmark?');
+            if (!ok) {
+                return;
+            }
+
+            const index = bookmarks.findIndex(bm => bm.id === id);
+            if (index !== -1) {
+                bookmarks.splice(index, 1);
+                render();
+            }
+        }
+    });
+
 
     // first render (empty)
     render();
