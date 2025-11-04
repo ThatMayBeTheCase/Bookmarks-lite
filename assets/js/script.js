@@ -79,6 +79,12 @@ document.addEventListener('DOMContentLoaded', () => {
     list.addEventListener('click', (event) => {
         if (event.target.matches('.delete-btn')) {
             const id = event.target.dataset.id;
+
+            const ok = confirm('Are you sure you wanna delete this bookmark?');
+            if (!ok) {
+                return;
+            }
+
             const index = bookmarks.findIndex(bm => bm.id === id);
             if (index !== -1) {
                 bookmarks.splice(index, 1);
