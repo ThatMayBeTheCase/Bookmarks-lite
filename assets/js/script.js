@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const empty = document.getElementById('empty-state');
     const STORAGE_KEY = 'bookmarks.v1'
 
+    // read from localStorage
     const bookmarks = loadBookmarks();
 
     function loadBookmarks() {
@@ -18,6 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
         catch {
             return [];
         }
+    }
+    
+    // Save as JSON for future export/import
+    function saveBookmarks() {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(bookmarks));
     }
 
     function normalizeUrl(value) {
