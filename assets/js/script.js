@@ -4,9 +4,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const list = document.getElementById('bookmark-list');
     const error = document.getElementById('form-error');
     const empty = document.getElementById('empty-state');
+    const STORAGE_KEY = 'bookmarks.v1'
 
-    // "database" in memory.
-    const bookmarks = [];
+    const bookmarks = loadBookmarks();
+
+    function loadBookmarks() {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return [];
+        try {
+            const parsed = JSON.parse(raw);
+            return Array.isArray(parsed) ? parsed : [];
+        }
+        catch {
+            return [];
+        }
+    }
 
     function normalizeUrl(value) {
         if (!value) return null;
