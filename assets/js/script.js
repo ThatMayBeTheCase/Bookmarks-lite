@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             createdAt: Date.now()
         });
 
+        saveBookmarks();
         render();
 
         form.reset();
@@ -106,12 +107,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const index = bookmarks.findIndex(bm => bm.id === id);
             if (index !== -1) {
                 bookmarks.splice(index, 1);
+                saveBookmarks();
                 render();
             }
         }
     });
 
 
-    // first render (empty)
+    // first render with data from localStorage.
     render();
 });
