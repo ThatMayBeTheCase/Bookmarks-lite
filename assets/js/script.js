@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 <strong>${bm.title}
                     <button type="button" class="delete-btn" data-id="${bm.id}">
-                        Delete
+                        ×
                     </button>
                 </strong><br>
                 <a href="${bm.url}" target="_blank" rel= "noopener noreferrer">
