@@ -13,6 +13,7 @@
 
 body {
     background-color: var(--bg-color);
+    font-family: var(--poppins);
 }
 
 .container {
