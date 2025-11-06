@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const list = document.getElementById('bookmark-list');
     const error = document.getElementById('form-error');
     const empty = document.getElementById('empty-state');
-    const searchInput = document.getElementById('bookmark-search');
+    const searchInput = document.getElementById('search-bar');
     const STORAGE_KEY = 'bookmarks.v1'
 
     // read from localStorage
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         empty.classList.toggle('hidden', filtered.length !== 0);
 
-        if (bookmarks.length === 0) {
+        if (filtered.length === 0) {
             return;
         }
 

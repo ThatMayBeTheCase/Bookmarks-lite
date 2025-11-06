@@ -105,12 +105,12 @@ button:hover {
     font-family: var(--poppins);
     color: var(--text-color);
 }
-.bookmark-search {
+#bookmark-search {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
-.bookmark-search .search-bar {
+#bookmark-search #search-bar {
     margin-left: auto;
     width: 260px;
 }
@@ -127,12 +127,12 @@ button:hover {
     gap: 0.5rem;
 }
 #bookmark-list a {
-    color: var(--accent-color);
+    color: var(--muted-text);
     word-break: break-all;
     text-decoration: none;
 }
 #bookmark-list a:hover {
-    color: var(--text-color);
+    color: var(--accent-color);
 }
 #bookmark-list li {
     background-color: var(--bg-light);
@@ -151,4 +151,3 @@ button:hover {
 .hidden {
     display: none;
 }
-
