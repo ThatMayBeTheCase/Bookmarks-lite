@@ -4,10 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const list = document.getElementById('bookmark-list');
     const error = document.getElementById('form-error');
     const empty = document.getElementById('empty-state');
+    const searchInput = document.getElementById('bookmark-search');
     const STORAGE_KEY = 'bookmarks.v1'
 
     // read from localStorage
     const bookmarks = loadBookmarks();
+    let searchQuery = '';
 
     function loadBookmarks() {
         const raw = localStorage.getItem(STORAGE_KEY);
@@ -42,22 +44,31 @@ document.addEventListener('DOMContentLoaded', () => {
         // empty list.
         list.innerHTML = '';
 
-        empty.classList.toggle('hidden', bookmarks.length !== 0);
+        // Filter for search string
+        const filtered = bookmarks.filter((bm) => {
+            if (!searchQuery) return true;
+            const q = searchQuery.toLowerCase();
+            return (
+                bm.title.toLowerCase().includes(q) || 
+                bm.url.toLowerCase().includes(q)
+            );
+        });
+
+        empty.classList.toggle('hidden', filtered.length !== 0);
 
         if (bookmarks.length === 0) {
             return;
         }
 
-        for (const bm of bookmarks) {
+        for (const bm of filtered) {
             const li = document.createElement('li');
             li.innerHTML = `
-                
                 <strong>${bm.title}
                     <button type="button" class="delete-btn" data-id="${bm.id}">
                         ×
                     </button>
                 </strong><br>
-                <a href="${bm.url}" target="_blank" rel= "noopener noreferrer">
+                <a href="${bm.url}" target="_blank" rel="noopener noreferrer">
                 ${bm.url}
                 </a>
             `;
@@ -112,6 +123,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     });
+
+    // Search input
+    if (searchInput) {
+        searchInput.addEventListener('input', (event) => {
+            searchQuery = event.target.value;
+            render();
+        });
+    }
 
     // first render with data from localStorage.
     render();
