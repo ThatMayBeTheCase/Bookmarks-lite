@@ -8,6 +8,8 @@ Ett litet webbläsarverktyg för att spara länkar (titel + URL) och visa dem i 
 - [Tekniker](#tekniker)
 - [Arbetsflöde](#arbetsflöde)
 - [Kom igång](#kom-igång)
+- [PR reviews](#pr-reviews)
+- [Konflikter](#konflikter)
 
 ## Bakgrund
 Detta projekt är gjort inom utbildningen **MU25** som en del av examinationen för versionshantering och strategier med Git.
@@ -43,14 +45,17 @@ Om du önskar köra det lokalt:
 ```
 Öppna sedan `index.html` i valfri webbläsare.
 
-## Pull request reviews
-#### Given
-[review 1](https://github.com/VitaliyBeletskiy/mu25-git-agile-bookmarks-mini/pull/3#pullrequestreview-3416300542)
+## PR reviews
+### Given:
+- [review 1](https://github.com/VitaliyBeletskiy/mu25-git-agile-bookmarks-mini/pull/3#pullrequestreview-3416300542)
 
-[review 2](https://github.com/VitaliyBeletskiy/mu25-git-agile-bookmarks-mini/pull/4#pullrequestreview-3417133705)
+- [review 2](https://github.com/VitaliyBeletskiy/mu25-git-agile-bookmarks-mini/pull/4#pullrequestreview-3417133705)
 
-#### Mottagen
-[review 1](https://github.com/ThatMayBeTheCase/Bookmarks-lite/pull/2#pullrequestreview-3411508619)
+### Mottagen:
+- [review 1](https://github.com/ThatMayBeTheCase/Bookmarks-lite/pull/2#pullrequestreview-3411508619)
+
+## Konflikter
+[konflikt länk](https://github.com/ThatMayBeTheCase/Bookmarks-lite/pull/12/#issuecomment-3498023243)
 
 ---
 
