@@ -30,7 +30,7 @@ Detta projekt är gjort inom utbildningen **MU25** som en del av examinationen f
 
 ## Arbetsflöde
 - Trello: [Bookmarks-Lite](https://trello.com/b/9ns4mnVP/mu25-bookmark-app)
-- 1 kort i Trello -> 1 feature-branch -> 1 PR -> squash till `main`
+- 1 kort i Trello &rarr; 1 feature-branch &rarr; 1 PR &rarr; squash till `main`
 - `main` uppdateras bara via PR
 - Se Trello för user stories, AC och status
 
