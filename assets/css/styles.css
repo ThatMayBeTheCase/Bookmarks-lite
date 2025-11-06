@@ -105,6 +105,15 @@ button:hover {
     font-family: var(--poppins);
     color: var(--text-color);
 }
+.bookmark-search {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.bookmark-search .search-bar {
+    margin-left: auto;
+    width: 260px;
+}
 #bookmark-section p {
     font-family: var(--poppins);
     color: var(--muted-text);
