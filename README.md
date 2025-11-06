@@ -21,13 +21,12 @@ Detta projekt är gjort inom utbildningen **MU25** som en del av examinationen f
 - Ta bort-knapp till sparade bokmärke
 - Öppna i ny flik funktion
 - Persistens med localStorage
+- Dubblettskydd
 
 ## Tekniker
 - HTML, CSS, JavaScript
 - Enkel DOM-manipulation
 - Git + GitHub
-- Trello
-
 
 ## Arbetsflöde
 - Trello: [Bookmarks-Lite](https://trello.com/b/9ns4mnVP/mu25-bookmark-app)
@@ -43,6 +42,15 @@ Om du önskar köra det lokalt:
    cd Bookmarks-Lite
 ```
 Öppna sedan `index.html` i valfri webbläsare.
+
+## Pull request reviews
+#### Given
+[review 1](https://github.com/VitaliyBeletskiy/mu25-git-agile-bookmarks-mini/pull/3#pullrequestreview-3416300542)
+
+[review 2](https://github.com/VitaliyBeletskiy/mu25-git-agile-bookmarks-mini/pull/4#pullrequestreview-3417133705)
+
+#### Mottagen
+[review 1](https://github.com/ThatMayBeTheCase/Bookmarks-lite/pull/2#pullrequestreview-3411508619)
 
 ---
 
