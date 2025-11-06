@@ -7,6 +7,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('search-bar');
     const STORAGE_KEY = 'bookmarks.v1'
 
+    function getUrlkey(href) {
+        try {
+            const u = new URL(href);
+            const pathname = u.pathname.replace(/\/$/, '');
+            return (u.host + pathname).toLowerCase();
+        }
+        catch {
+            return href.toLowerCase();
+        }
+    }
+
     // read from localStorage
     const bookmarks = loadBookmarks();
     let searchQuery = '';
@@ -89,6 +100,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!title || !normalizedUrl) {
             error.textContent = 'Please enter a title and a valid URL.';
+            return;
+        }
+
+        // duplicate protection.
+        const newKey = getUrlkey(normalizedUrl);
+        const exists = bookmarks.some((bm) => getUrlkey(bm.url) === newKey);
+        if (exists) {
+            error.textContent = 'Bookmark already exists.';
             return;
         }
 
